@@ -8,12 +8,10 @@ Pod::Spec.new do |s|
   s.homepage     = 'http://parse.com'
   s.author = { 'Parse' => 'support@parse.com' }
   s.source = { :git => 'https://github.com/jessbowers/Parse.git', :tag => "#{s.version}" }
-  s.source_files = 'ParseDummy.{m,h}'
-  s.preserve_paths = 'Parse.framework'
   s.requires_arc = true
-  s.frameworks =  'StoreKit', 'AudioToolbox', 'CFNetwork', 'SystemConfiguration', 'MobileCoreServices', 'CoreGraphics', 'Security', 'QuartzCore', 'CoreLocation', 'Parse'
+  s.frameworks = 'AudioToolbox', 'CFNetwork', 'CoreGraphics', 'CoreLocation', 'MobileCoreServices', 'QuartzCore', 'Security', 'StoreKit', 'SystemConfiguration'
+  s.vendored_frameworks = 'Parse/Parse.framework'
   s.weak_frameworks = 'AdSupport','Social', 'Accounts'
-  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Parse"' }
   s.library = 'z', 'sqlite3'
-  s.dependency 'Facebook-iOS-SDK', '~> 3.7'
+  s.dependency 'Facebook-iOS-SDK', '~> 3.9'
 end
