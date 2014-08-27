@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name                = 'Parse'
   s.version             = '1.2.21'
   s.license             = { :type => 'Commercial', :text => 'See https://parse.com/about/terms' }
-  s.platform            = :ios, '5.0'
+  s.platform            = :ios, '6.0'
   s.summary             = 'Parse iOS SDK for developing apps using the Parse cloud app platform.'
   s.description         = 'The Parse iOS SDK enables access to the parse.com cloud app platform. Requires an account with parse.com. To integrate after adding this pod, continue with step 9 in the QuickStart: (https://parse.com/apps/quickstart).'
   s.homepage            = 'http://parse.com'
@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = "Parse.framework"
   s.requires_arc        = true
   s.frameworks          = 'AudioToolbox', 'CFNetwork', 'CoreGraphics', 'CoreLocation', 'MobileCoreServices', 'QuartzCore', 'Security', 'StoreKit', 'SystemConfiguration'
-  s.dependency 'Facebook-iOS-SDK', '~> 3.11'
+  s.dependency 'Facebook-iOS-SDK', '~> 3.17'
 end
